@@ -1,0 +1,35 @@
+# define a function "is_triangle" that takes the legths of the three sides as input
+
+def is_triangle(side1, side2, side3):
+
+    # check triangle inequality
+    # We check the triangle inequality theorem by verifying if the sum of the lengths of any two sides is greater than the length of the third side.
+    # If this condition is satisfied for all three combinations of sides, we return "True", indicating that a triangle can be formed.
+
+    if side1 + side2 > side3 and side1 + side3 > side2 and side2 + side3 > side1:
+    return True
+
+    if side1 + side2 > side3 and side1 + side3 > side2 and side2 + side3 > side1:
+    
+        return True
+    
+    #If the conditions are not met, we return False, indicating that a triangle cannot be formed.
+
+    else:
+        return False
+
+# Input lengths of the sides from the user
+side1 = int(input("Enter the length of the first side: "))
+side2 = int(input("Enter the length of the second side: "))
+side3 = int(input("Enter the length of the third side: "))
+
+# Check if a triangle can be formed
+if is_triangle(side1, side2, side3):
+    print("A triangle can be formed with the given side lengths.")
+else:
+    print("A triangle cannot be formed with the given side lengths.")
+
+# The is_triangle function checks the existence of a triangle given the lengths of its three sides.
+# It applies the triangle inequality theorem, which is a necessary condition for three given side lengths to form a triangle.
+# If the sum of the lengths of any two sides is greater than the length of the third side for all three combinations of sides, a triangle can be formed, and the function returns True. Otherwise, it returns False.
+

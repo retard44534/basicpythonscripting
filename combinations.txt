@@ -1,0 +1,41 @@
+# define a function "factorial" to calculate the factorial of a non-negative integer n.
+
+def factorial(n):
+
+    if n == 0:
+         return 1
+    else:
+        return n * factorial
+
+# define a function " calculate_combinations" that takes two integers n and k as input:
+
+def calculate_combinations(n, k):
+
+    # calculate combinations
+    # we calculate the factorials of n,k, and n-k using the "factorial" function.
+
+    n_factorial = factorial(n)
+    k_factorial = factorial(k)
+    n_minus_k_factorial = factorial(n - k)
+
+    # calculate combinations
+    # we use formula to calculate combinations to calculate the number of combinations
+
+    combinations = n_factorial // (k_factorial * n_minus_k_factorial)
+
+    return combinations
+
+    # aftercalculating the combinations, we return the result
+
+# Input values of n and k from the user
+
+n = int(input("Enter the total number of elements (n): "))
+k = int(input("Enter the number of elements to choose (k): "))
+
+# Calculate the number of combinations
+num_combinations = calculate_combinations(n, k)
+
+# Print the result
+print("The number of combinations of ", k, " elements from", n, " elements is: ", num_combinations)
+
+
