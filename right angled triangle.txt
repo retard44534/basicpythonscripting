@@ -1,0 +1,31 @@
+# define a function "is_right_triangle" that takes three side lengths as input
+
+def is_right_triangle(a, b, c):
+
+    # we sort the side lengths in ascending order to make it isier to apply the pythagorean theorem.
+
+    sides = sorted([a, b, c])
+    
+    # we check if the sorted side lengths satisfy the pythagoreantheorem
+
+    if sides[0]**2 + sides[1]**2 == sides[2]**2:
+        
+        # if the triangle is right-angled, we return "True"
+       
+        return True
+
+# example:
+
+a = 3
+b = 4
+c = 5
+
+is_right = is_right_triangle(a, b, c)
+if is_right:
+print("The triangle is right-angled.")
+else:
+print("The triangle is not right-angled.")
+
+# We sort the side lengths in ascending order to make it easier to apply the Pythagorean theorem.
+# We then check if the sorted side lengths satisfy the Pythagorean theorem.
+# If the theorem is satisfied, the triangle is right-angled, and we return True. Otherwise, we return False.

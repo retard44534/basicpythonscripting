@@ -1,0 +1,45 @@
+# define a function "swap_matrices" that takes two 3x3 matrices("matrix1" and "matrix2") as input
+
+def swap_matrices(matrix1, matrix2):
+
+    # perform the swap
+    # we use two cycles to go through each element of the matrices.
+    
+    for i in range(3):
+        for j in range(3):
+            matrix1[i][j], matrix2[i][j] = matrix2[i][j], matrix1[i][j]
+    
+    return matrix1, matrix2
+
+    # after performing the swap, we return the swaped matrices
+
+
+# Example:
+
+matrix1 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+matrix2 = [
+    [10, 11, 12],
+    [13, 14, 15],
+    [16, 17, 18]
+]
+
+# Perform the swap
+
+swapped_matrix1, swapped_matrix2 = swap_matrices(matrix1, matrix2)
+print("Matrix 1 after swapping:")
+
+for row in swapped_matrix1:
+    print(row)
+print("\nMatrix 2 after swapping:")
+for row in swapped_matrix2:
+    print(row)
+
+# We call the "swap_matrices" function with two matrices as arguments and store the swapped matrices in variables "swapped_matrix1" and "swapped_matrix2".
+# The swap_matrices function cyclically swaps the contents of two 3x3 matrices by swapping corresponding elements in each row.
+# After the swap, the function returns the modified matrices.
+# The example usage demonstrates how to call the function and print the swapped matrices.
