@@ -1,0 +1,36 @@
+# define a function "fibonacci_sequence" that takes the length of the sequence as the input
+
+def fibonacci_sequence(length):
+
+    # we need to store the fibonacci sequence. the fibonacci sequence starts with the first two numbers, which are typically defined as 0 and 1
+
+    fib_sequence = [0, 1]
+
+    # calculate fibonacci numbers
+    # we use cycle starting from "2" (since the first numbers are already in the sequence) up to the specific length
+    # for each, we calculate the next fibonacci number by adding the last two numbers in the sequence and append it to the list
+
+    for i in range(2, length):
+        next_number = fib_sequence[-1] + fib_sequence[-2]
+        fib_sequence.append(next_number)
+
+    return fib_sequence
+
+# Ask the user for the length of the Fibonacci sequence
+sequence_length = int(input("Enter the length of the Fibonacci sequence: "))
+
+# Generate the Fibonacci sequence
+fibonacci_seq = fibonacci_sequence(sequence_length)
+
+# Print the Fibonacci sequence
+print("Fibonacci sequence:")
+print(fibonacci_seq)
+
+#After generating the sequence, we print it to the console.
+
+# The fibonacci_sequence function generates the Fibonacci sequence up to the specified length.
+# It starts with the first two numbers (0 and 1) and then calculates subsequent Fibonacci numbers by adding the last two numbers.
+# Finally, it returns the generated Fibonacci sequence.
+
+
+
