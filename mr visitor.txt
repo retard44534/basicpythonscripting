@@ -1,0 +1,10 @@
+name = (input("Enter a name: "))
+address = "xxxxxxxxxxxxxxxxxxx"
+difference = (len(address)-len(name)-1)
+print("+","-"*len(address),"+")
+if name > address:
+        difference =
+difference = (len(address)-len(name)-1)
+print("|",name," "*difference,"|")
+print("|",address,"|")
+print("+","-"*len(address),"+")
