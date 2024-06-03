@@ -1,0 +1,46 @@
+# define a function "multiply_matrix_vector" that takes a 3x3 matrix and a vector as a input
+
+def multiply_matrix_vector(matrix, vector):
+
+    
+    # we need a new vector "result" filled with 0 to store the result of the multiplication
+
+    result = [0, 0, 0]
+
+    # perform the multiplication
+    for i in range(3):
+        for j in range(3):
+            result[i] += matrix[i][j] * vector[j]
+
+    # we go through the rows of the matrix 
+    # for each row, we go through the columns and calculate the dot product of the row with the vector
+
+    # store the result ( we store the dot product in the "result" vector)
+
+    return result
+
+    # after performing the multiplicationwe return the resulting vector
+
+# example 
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# Example vector
+
+vector = [1, 2, 3]
+
+# Perform the multiplication
+
+result_vector = multiply_matrix_vector(matrix, vector)
+
+# Print the result
+print("Resulting vector after multiplication:")
+print(result_vector)
+
+# The multiply_matrix_vector function multiplies a 3x3 matrix by a vector by calculating the dot product of each row of the matrix with the vector.
+# It initializes a new vector to store the result and iterates through the rows and columns of the matrix to perform the multiplication.
+# After performing the multiplication, it returns the resulting vector.

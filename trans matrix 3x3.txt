@@ -1,0 +1,46 @@
+# define a function " transpose_matrix" that takes a 3x3 matrix as input 
+
+def transpose_matrix(matrix)
+
+    # create the transpose
+
+    transpose = [[0, 0, 0] for _ in range(3)]
+
+    # we need a new matrix "transpose" with size 3x3 filled with zero to make a transpose
+
+    for i in range(3):
+        for j in range(3):
+            transpose[j][i] = matrix[i][j]
+
+    # we go through the rows and columns of the original matrix 
+    # For each element in the original matrix, we assign it to the corresponding position in the transpose matrix.
+
+    return transpose
+
+    # after creating the transpose matrix we return it 
+
+# Example 
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# Create the transpose matrix
+
+transpose = transpose_matrix(matrix)
+
+# Print the transpose matrix
+
+print("Original matrix:")
+
+for row in matrix:
+    print(row)
+print("\nTranspose matrix:")
+for row in transpose:
+    print(row)
+
+
+# the "transpose_matrix" function creates the transpose of a 3x3 matrix by going through the rows and columns of the original matrix and assigning the corresponding elements to the transpose matrix.
+# After creating the transpose matrix, it returns it.
