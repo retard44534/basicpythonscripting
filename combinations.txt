@@ -38,4 +38,6 @@ num_combinations = calculate_combinations(n, k)
 # Print the result
 print("The number of combinations of ", k, " elements from", n, " elements is: ", num_combinations)
 
-
+# The calculate_combinations function calculates the number of combinations of k elements from a set of n elements using the formula for combinations.
+# It calculates the factorials of n, k, and n−k and then applies the formula to find the number of combinations.
+# After calculating the combinations, it returns the result.
