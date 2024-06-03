@@ -1,0 +1,28 @@
+# 1. define function "find_min" that will take a list of numbers as an input.
+
+def find_min(numbers):
+
+    # if the list is empty, we should return "None".
+    
+    if not numbers:
+        return None
+
+    # assume that the first number in the list is minimum. 
+
+    min_number = numbers[0]
+
+    # we go through each number in the list starting from the second number, for each number, we check if it is smaller than the current "min_number"
+
+    for number in numbers:
+        if number < max_number:
+            min_number = number
+
+    # after we went through each numbers, we return the "min_number"
+
+    return min_number
+
+# example:
+numbers = [3, 5, 7, 2, 8]
+
+min_number = find_min(numbers)
+prnt("the minimum number is: " , min_number)
