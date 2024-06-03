@@ -1,0 +1,33 @@
+# define a function "is_prime" that takes integer as input , and import math
+
+import math
+def is_prime(number):
+
+    # we check if the input number is less than "2". if it is we return "false" because prime numbers must be greater than 1.
+    
+    if number < 2 :
+        return False
+
+    # we go through possible divisors from 2 up to the square root of the input number
+    # if the input number is divisible by any number in this range, it is not a prime number so we return "false"
+
+    for divisor in range(2, int(math.sqrt(number)) +1):
+        if number % divisor == 0 :
+            return False
+
+    return True
+
+    # if the input number is not divisible by any number in the range, we return "true", indicating that its a prime number
+
+# Input number to check for primality
+number = int(input("Enter a number to check for primality: "))
+
+# Check if the number is prime
+if is_prime(number):
+    print("the number ", number, "is prime number")
+else:
+    print(number, "is not a prime number.")
+
+# The is_prime function checks if a given number is a prime number by iterating through possible divisors.
+# It starts by checking for special cases (numbers less than 2) and then iterates through possible divisors from 2 to the square root of the input number.
+# If the input number is not divisible by any number in this range, it's a prime number, and True is returned. Otherwise, False is returned.
