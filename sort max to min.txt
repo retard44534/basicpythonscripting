@@ -1,0 +1,32 @@
+# define a function "sort_max_to_min" that takes a list of five numbers as input
+
+def sort_max_to_min(numbers):
+
+    # check if the list contains exactly five numbers and return "None" if it does not.
+
+    if len(numbers) != 5:
+    return None
+
+    # bubble sort algorithm
+
+    n= len(numbers)
+    for i in range(n):
+        for j in range(0,n - i - 1):
+            if numbers[j] < numbers[j+1]:
+                numbers[j], numbers[j+1] = numbers[j+1], numbers[j]
+
+    return numbers
+
+# example:
+numbers = [3 , 1, 4, 1, 5]
+
+sorted_numbers = sort_max_to_min(numbers)
+print("the sorted list from max number to min number is: ", sorted_numbers)
+
+# bubble sort:
+# we use two cycles
+# The outer loop runs from 0 to n (the length of the list).
+# The inner loop runs from 0 to n - i - 1.
+# Inside the inner loop, we compare adjacent elements
+# If the current element (numbers[j]) is smaller than the next element (numbers[j + 1]), we swap them.
+# This process is repeated until the entire list is sorted in max to min order.
