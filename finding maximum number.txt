@@ -1,0 +1,28 @@
+# 1. define function "find_max" that will take a list of numbers as an input.
+
+def find_max(numbers):
+
+    # if the list is empty, we should return "None".
+    
+    if not numbers:
+        return None
+
+    # assume that the first number in the list is maximum. 
+
+    max_number = numbers[0]
+
+    # we go through each number in the list starting from the second number, for each number, we check if it is greater than the current "max_number"
+
+    for number in numbers:
+        if number > max_number:
+            max_number = number
+
+    # after we went through each numbers, we return the "max_number"
+
+    return max_number
+
+# example:
+numbers = [3, 5, 7, 2, 8]
+
+max_number = find_max(numbers)
+prnt("the maximum number is: " , max_number)
