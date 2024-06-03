@@ -1,0 +1,57 @@
+# 1. import random to generate random characters for the password
+
+import random
+
+# define a function "generate_password" that takes two parameters the number of vowels and the number of digits
+
+def generate_password(num_vowels, num_digits):
+
+    # define vowels and digits
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+    # generate password components
+    password_components = []
+    for _ in range(num_vowels):
+        password_vowels.append(random.choice(vowels))
+    for _ in range(num_digits):
+        password_digits.append(random.choice(digits))
+
+    # we generate random vowels and digits based on the users input count using the "random.choice()" function
+    # we append these to a list called "password_components"
+
+    # combine components to form the password
+
+    password = password_vowels + password_digits
+
+    # shuffle the password 
+    # we shuffle the password characters to make it more random
+
+    password_list = list(password)
+    random.shuffle(password_list)
+    password = ''.join(password_list)
+
+    return password
+
+    # after generating the password we return it 
+
+
+# Input the number of vowels and digits from the user
+
+num_vowels = int(input("Enter the number of vowels: "))
+num_digits = int(input("Enter the number of digits: "))
+
+# Generate the password
+
+password = generate_password(num_vowels, num_digits)
+
+# Print the generated password
+
+print("Generated password:", password)
+
+# The program first takes the number of vowels and digits from the user.
+# it then generates random vowels and digits based on the user's input counts.
+# The generated vowels and digits are combined to form the password.
+# The password characters are then shuffled to make the password more random.
+#  Finally, the generated password is printed.
+

@@ -1,0 +1,38 @@
+# import "random" to generate random numbers
+
+import random
+
+# define a function "roll_biased_die" that simulates a roll of biased die
+
+def roll_biased_die():
+
+    #Simulates a roll of a biased die with the following probabilities:
+    #1: 10%
+    #2: 10%
+    #3: 10%
+    #4: 15%
+    #5: 15%
+    #6: 40%
+
+    # define probabilities 
+    # we define the sides of the dice ( 1 to 6) and their corresponding probabilities according to the given specifications
+
+    sides = [1, 2, 3, 4, 5, 6]
+    probabilities = [0.10, 0.10, 0.10, 0.15, 0.15, 0.40]
+
+    # simulate the dice roll
+    # we use "random.choices()" function to randomly select an outcome based on the specified probabilities
+
+    result = random.choices(sides, probabilities)[0]
+
+    return result
+
+    # after simulating the dice roll we return the result
+
+# Simulate a die roll
+roll_result = roll_biased_die()
+
+# Print the result
+print("The result of the biased die roll is:", roll_result)
+
+
