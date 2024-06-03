@@ -1,1 +1,52 @@
-ghchggvhjvhj
+def fibonacci(pocet_cisiel):
+    # first and second term of fibonacci sequence
+    fib1, fib2 = 1, 1
+
+    # print of first term
+    print(fib1, end=' ')
+
+    # 
+    pocet_zvysnych = pocet_cisiel - 1
+
+    # Výpis zvyšných čísel postupnosti
+    for _ in range(pocet_zvysnych):
+        # Vypočet ďalšieho čísla Fibonacciho postupnosti
+        fib_next = fib1 + fib2
+        # Výpis aktuálneho čísla
+        print(fib_next, end=' ')
+        # Aktualizácia hodnôt pre výpočet ďalšieho čísla
+        fib1, fib2 = fib2, fib_next
+
+# Získanie vstupu od používateľa
+try:
+    dlzka_postupnosti = int(input("Zadajte dĺžku postupnosti Fibonacciho čísel: "))
+    if dlzka_postupnosti <= 0:
+        print("Chyba: Dĺžka postupnosti musí byť kladné celé číslo.")
+    else:
+        # Volanie funkcie fibonacci s danou dĺžkou postupnosti
+        print("Fibonacciho postupnosť s dĺžkou", dlzka_postupnosti, "je:")
+        fibonacci(dlzka_postupnosti)
+except ValueError:
+    print("Chyba: Neplatný vstup. Dĺžka postupnosti musí byť celé číslo.")
+
+def print_fibonacci_sequence(n):
+    """
+    Prints the Fibonacci sequence of numbers while the user enters the input sequence length as input.
+
+    :param n: The number of elements in the sequence.
+    :return: None
+    """
+    # Initialize the first two numbers in the sequence
+    a, b = 0, 1
+
+    # Print the sequence
+    for i in range(n):
+        # Print the next number in the sequence
+        print(a)
+
+        # Update the values of a and b
+        a, b = b, a + b
+
+# Example usage:
+n = int(input("Enter the number of elements in the sequence: "))
+print_fibonacci_sequence(n)
