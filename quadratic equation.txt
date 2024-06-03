@@ -1,0 +1,46 @@
+# define a function " slove_quadratic_equation" that take three numbers as input
+
+def slove_quadratic_equation(a, b, c):
+
+    # calculate the discriminant
+
+    D = b**2 - 4*a*c
+
+    # check discriminant 
+
+    if D > 0:
+        # Two real and distinct roots
+        root1 = (-b + D**0.5) / (2*a)
+        root2 = (-b - D**0.5) / (2*a)
+    elif D == 0:
+        # Two real and identical roots
+        root = -b / (2*a)
+        return root, root
+    else:
+        # Complex roots (not solving)
+        return None, None
+
+
+# Input coefficients from the user
+
+a = float(input("Enter the coefficient of x^2 (a): "))
+b = float(input("Enter the coefficient of x (b): "))
+c = float(input("Enter the constant term (c): "))
+
+# Solve the quadratic equation
+root1, root2 = solve_quadratic_equation(a, b, c)
+
+# Print the roots
+if root1 is not None:
+    print("Roots of the quadratic equation:")
+    print("Root 1: ", root1)
+    print(f"Root 2: ", root2)
+else:
+    print("The quadratic equation has complex roots and will not be solved.")
+
+# The program first takes the coefficients a, b, and c from the user.
+# It then calculates the discriminant and checks its value to determine the nature of the roots of the quadratic equation.
+# If the discriminant is positive, it calculates two real and distinct roots using the quadratic formula.
+# If the discriminant is zero, it calculates two real and identical roots.
+# If the discriminant is negative, it does not solve the equation as it has complex roots.
+# Finally, it prints the roots of the quadratic equation.
