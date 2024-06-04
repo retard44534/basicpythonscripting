@@ -33,6 +33,14 @@ file_path = 'your_file.txt'  # Replace with your file path
 count_characters_and_vowels(file_path)
 
 
+#riadky = []
+#with open("C:.txt", "r") as file:
+#        riadky = file.readlines()
+#riadky = [line.strip() for line in riadky if line.strip()]
+#        
+#for i in range(len(riadky)):
+#        print(riadky[i])
+
 
 
 
