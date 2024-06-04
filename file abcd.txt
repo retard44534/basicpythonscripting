@@ -1,0 +1,41 @@
+def count_characters_and_vowels(file_path):
+    # Initialize the dictionary for counting characters
+    char_count = {}
+    vowels = 'aeiouAEIOU'
+    vowel_count = {v: 0 for v in vowels}
+
+    # Read the file
+    with open(file_path, 'r') as file:
+        contents = file.read()
+
+    # Count occurrences of all characters and vowels
+    for char in contents:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+
+        if char in vowel_count:
+            vowel_count[char] += 1
+
+    # Print the count of all characters
+    print("Character counts:")
+    for char, count in char_count.items():
+        print(f"'{char}': {count}")
+
+    # Print the count of vowels
+    print("\nVowel counts:")
+    for vowel, count in vowel_count.items():
+        print(f"'{vowel}': {count}")
+
+# Example usage:
+file_path = 'your_file.txt'  # Replace with your file path
+count_characters_and_vowels(file_path)
+
+
+
+
+
+
+
+
